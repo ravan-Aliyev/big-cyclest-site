@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 function ProductItem({ modelName, price, sizes, catacory, imgUrl, id }) {
   const [activePrice, setActivePrice] = useState("");
   const [activeValue, setActiveValue] = useState(null);
-  const [proSize, setProSize] = useState("");
   const dispatch = useDispatch();
+  const [proSize, setProSize] = useState("");
 
   const activeValues = (aValue, aPrice, size) => {
     setActiveValue(aValue);
