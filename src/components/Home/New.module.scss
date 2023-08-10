@@ -1,0 +1,25 @@
+@use "../../assets/sass/" as *;
+
+.new {
+  color: $color-white;
+  font-family: $font-family;
+  text-align: center;
+  background-position: center;
+  &__content {
+    display: grid;
+    gap: 3rem;
+    justify-items: center;
+    padding: 4rem 0;
+
+    button {
+      margin-top: 2rem;
+    }
+
+    p {
+      font-family: $font-display;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      padding: 0 12%;
+    }
+  }
+}

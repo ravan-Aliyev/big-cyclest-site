@@ -1,0 +1,32 @@
+@use "../../assets/sass/" as *;
+
+.list {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  @include respond($bp-little) {
+    // grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+
+  grid-auto-flow: column;
+  font-family: $font-display;
+  font-weight: 500;
+
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  gap: 1rem;
+
+  &__icon {
+    vertical-align: middle;
+    margin-right: 1rem;
+
+    &--red {
+      color: $color-primary;
+    }
+
+    &--white {
+      color: $color-white;
+    }
+  }
+}

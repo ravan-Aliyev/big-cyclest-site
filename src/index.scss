@@ -1,0 +1,43 @@
+@use "./assets/sass/" as *;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond($bp-largest) {
+    font-size: 56.25%;
+  }
+  @include respond($bp-large) {
+    font-size: 50%;
+  }
+
+  // @include respond($bp-little) {
+  //   font-size: 37.5%;
+  // }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+body {
+  line-height: 1;
+  font-family: $font-display;
+}
+
+*::selection {
+  color: $color-white;
+  background-color: $color-primary;
+}
+
+// Safari and chrome

@@ -1,0 +1,79 @@
+@use "../../assets/sass/" as *;
+
+.container {
+  background-color: #fff;
+  padding: 10rem;
+  width: 70%;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: $color-black;
+
+  @include respond($bp-large) {
+    padding: 3rem;
+  }
+
+  select {
+    font-size: inherit;
+  }
+}
+
+.nav {
+  color: rgb(147, 147, 147);
+  text-transform: capitalize;
+}
+
+.showing {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin-left: 3.5px;
+  }
+
+  @include respond($bp-littlest) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.products-list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  row-gap: 5rem;
+
+  @include respond($bp-middle) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pagination-buttons {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
+
+  .pagination-btn {
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    @include center;
+    padding: 1.3rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background-color: $color-primary;
+    }
+  }
+}
+
+.active {
+  padding: 1.3rem;
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  color: #fff;
+}

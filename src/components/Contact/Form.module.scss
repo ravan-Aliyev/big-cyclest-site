@@ -1,0 +1,47 @@
+@use "../../assets/sass/" as *;
+
+.form-container {
+  width: 50%;
+  padding: 7rem;
+  background-color: #fff;
+  font-size: 1.6rem;
+  box-shadow: 0 3px 6rem rgba($color-black, 0.2);
+  transform: translateY(-20rem);
+
+  @include respond($bp-largest) {
+    transform: translateY(0);
+    padding: 4rem;
+  }
+
+  @include respond($bp-middle) {
+    width: 100%;
+  }
+
+  h3 {
+    margin-bottom: 4rem;
+  }
+
+  input,
+  textarea {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: $color-white;
+    border: 1px solid rgba($color-black, 0.3);
+    border-radius: 2px;
+    padding: 1.5rem 2rem;
+    width: 100%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .name {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}

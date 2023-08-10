@@ -1,0 +1,50 @@
+@use "../../../assets/sass/" as *;
+
+.item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.8rem 0 2rem;
+
+  &:not(:first-child) {
+    border-top: 1px solid rgba($color-black, 0.3);
+  }
+
+  &__img {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  &__info {
+    margin-right: auto;
+  }
+  &__name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &__price {
+    color: $color-grey;
+  }
+  &__button {
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 100%;
+    height: max-content;
+    border-bottom: 1px solid rgba($color-black, 0.3);
+    color: rgba($color-black, 0.3);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    @include center;
+
+    &:hover {
+      border-bottom: 1px solid rgba($color-black, 0.6);
+      color: rgba($color-black, 0.6);
+    }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

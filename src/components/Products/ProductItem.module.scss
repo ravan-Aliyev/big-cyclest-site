@@ -1,0 +1,87 @@
+@use "../../assets/sass" as *;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-family: $font-family;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__catecory {
+    color: rgb(138, 138, 138);
+    font-family: $font-display;
+  }
+
+  &__icon,
+  &__price {
+    font-family: $font-display;
+  }
+
+  &__price {
+    font-weight: 600;
+  }
+
+  &__item {
+    position: relative;
+    font-family: $font-display;
+
+    &:hover .cart-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.cart-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart-tooltip {
+  background-color: $color-black;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 3px;
+  opacity: 0;
+  transition: all 0.3s;
+  order: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent transparent $color-black;
+    margin-left: 10px;
+  }
+}
+
+.cart-icon {
+  background-color: rgba($color-white, 0.6);
+  color: rgba($color-black, 0.8);
+  padding: 1rem;
+  border-radius: 50%;
+  width: max-content;
+  opacity: 0;
+  transition: all 0.3s;
+  box-shadow: 0 2rem 6rem rgba($color-black, 0.8);
+  @include center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-black;
+  }
+
+  &:hover ~ .cart-tooltip {
+    opacity: 1;
+  }
+}

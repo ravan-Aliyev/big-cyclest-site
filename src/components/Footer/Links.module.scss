@@ -1,0 +1,26 @@
+@use "../../assets/sass/" as *;
+
+.links-container {
+  font-family: $font-family;
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  .list {
+    display: grid;
+    gap: 1rem;
+    .item {
+      font-family: $font-display;
+      font-size: 1.6rem;
+
+      a {
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "../../assets/sass/" as *;
+
+.header {
+  background-attachment: local;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: 100rem;
+
+  font-family: $font-family;
+  color: #fff;
+
+  @include respond($bp-large) {
+    padding: 8rem 0;
+  }
+}
+
+.imgcontainer {
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-black, 0.2),
+      rgba($color-black, 0.9)
+    ),
+    url(https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/04/about-movie-bg-1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  width: 100%;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  svg {
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+  }
+}

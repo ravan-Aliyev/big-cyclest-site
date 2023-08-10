@@ -1,0 +1,79 @@
+@use "../../assets/sass/" as *;
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+
+  @include respond($bp-middle) {
+    flex-direction: column;
+  }
+
+  & > div {
+    width: 50%;
+
+    @include respond($bp-middle) {
+      width: 100%;
+    }
+  }
+}
+
+.pro {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba($color-black, 0.2);
+
+    h4 {
+      font-family: $font-family;
+    }
+  }
+
+  &__nav {
+    color: $color-grey;
+  }
+
+  &__details {
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  &__price {
+    font-size: 2.7rem;
+    font-weight: 600;
+    color: $color-grey;
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &__cart {
+    display: flex;
+    gap: 1.5rem;
+
+    input {
+      width: 6rem;
+      border: 1px solid rgba($color-black, 0.2);
+      text-align: center;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    button {
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__catacory {
+    padding: 2rem 0;
+
+    a {
+      color: $color-primary;
+    }
+  }
+}

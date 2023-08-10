@@ -1,0 +1,15 @@
+@use "../../assets/sass/" as *;
+
+.header {
+  @include respond($bp-large) {
+    height: 45vh;
+  }
+}
+
+.container {
+  background-attachment: local;
+  text-align: center;
+  color: #fff;
+  font-family: $font-family;
+  height: 100%;
+}

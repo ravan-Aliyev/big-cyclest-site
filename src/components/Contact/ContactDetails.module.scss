@@ -1,0 +1,51 @@
+@use "../../assets/sass/" as *;
+
+.section {
+  padding: 8rem 0;
+  max-height: 65rem;
+  background-color: $color-white;
+
+  @include respond($bp-largest) {
+    max-height: none;
+    padding: 0;
+  }
+}
+
+.container {
+  display: flex;
+  gap: 7rem;
+
+  @include respond($bp-largest) {
+    align-items: center;
+  }
+
+  @include respond($bp-middle) {
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 6rem;
+  }
+
+  h3,
+  h5 {
+    font-family: $font-family;
+    margin-bottom: 1rem;
+  }
+}
+
+.details {
+  width: 50%;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include respond($bp-middle) {
+    padding: 0 4rem;
+    width: 100%;
+  }
+
+  p {
+    color: rgb(76, 75, 75);
+    margin-bottom: 1rem;
+  }
+}

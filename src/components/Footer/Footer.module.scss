@@ -1,0 +1,52 @@
+@use "../../assets/sass/" as *;
+
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+
+  &__main {
+    padding: 8rem 0;
+    gap: 6rem;
+  }
+
+  &__links {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(20.5rem, 1fr));
+    // justify-items: center;
+    width: 100%;
+    padding: 0 4rem;
+    gap: 4rem;
+
+    @include respond($bp-littlest) {
+      justify-items: center;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid rgba($color-white, 0.2);
+    padding: 4rem 3rem;
+    font-size: 1.4rem;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .media-icons {
+      display: flex;
+      gap: 1.5rem;
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        &:hover {
+          fill: $color-primary;
+        }
+      }
+    }
+  }
+}

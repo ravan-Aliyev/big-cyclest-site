@@ -1,0 +1,104 @@
+@use "../assets/sass" as *;
+
+.navigation {
+  // grid-column: full-start / full-end;
+  // grid-row: 1 / 2;
+  z-index: 2;
+  margin-top: 1.2rem;
+  position: absolute;
+  width: 100%;
+  // justify-content: space-around;
+  // align-items: center;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+
+    @include respond($bp-middle) {
+      padding: 0 2rem;
+    }
+
+    font-size: 1.7rem;
+    color: $color-white;
+    font-family: $font-display;
+
+    font-weight: 600;
+  }
+
+  &__logo {
+    img {
+      height: 5rem;
+      width: 8rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 3rem;
+
+    @include respond($bp-large) {
+      display: none;
+    }
+
+    a {
+      color: currentColor;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &--little {
+      width: 100%;
+      background-color: #fff;
+      color: $color-black;
+      font-weight: 500;
+      position: absolute;
+      top: 10rem;
+      left: 0;
+
+      li {
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid rgba($color-grey, 0.2);
+      }
+    }
+  }
+}
+
+.nav-red {
+  margin-top: 0;
+  padding: 0 1rem;
+  background-color: $color-primary;
+  color: #fff;
+  position: fixed;
+  transition: all 0.3s;
+
+  @include respond($bp-middle) {
+    padding: 0;
+  }
+}
+
+.side-buttons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  .burger {
+    background: #fff;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 2px;
+    display: none;
+
+    svg {
+      fill: $color-primary;
+      font-size: 16px;
+    }
+
+    @include respond($bp-large) {
+      @include center;
+    }
+  }
+}

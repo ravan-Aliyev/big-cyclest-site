@@ -1,0 +1,90 @@
+@use "../../../assets/sass/" as *;
+
+.cart {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+
+  @include respond($bp-largest) {
+    width: 50%;
+  }
+
+  @include respond($bp-middle) {
+    width: 100%;
+  }
+
+  &__header {
+    padding: 1.7rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba($color-black, 0.2);
+  }
+
+  &__list {
+    flex: 1;
+    padding: 2rem 2rem 0;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__btn {
+    &--close {
+      cursor: pointer;
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    gap: 1rem;
+    padding: 1.7rem;
+    border-top: 1px solid rgba($color-black, 0.2);
+
+    button {
+      width: 100%;
+    }
+  }
+
+  &__total {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba($color-black, 0.2);
+  }
+}
+
+.cart-open {
+  animation: openCart 0.3s linear forwards;
+}
+
+.cart-close {
+  animation: closeCart 0.3s linear forwards;
+}
+
+@keyframes openCart {
+  from {
+    transform: translateX(100rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes closeCart {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100rem);
+  }
+}

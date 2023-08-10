@@ -1,0 +1,13 @@
+.figure {
+  background-repeat: no-repeat;
+
+  &:hover img {
+    opacity: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+  }
+}

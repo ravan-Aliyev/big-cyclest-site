@@ -1,0 +1,28 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  > * {
+    height: 2rem;
+    background-color: grey;
+    animation: emptyItem 1.5s infinite linear;
+  }
+}
+
+.img {
+  height: 22rem;
+}
+
+@keyframes emptyItem {
+  0% {
+    background-color: grey;
+  }
+  50% {
+    background-color: rgb(212, 208, 208);
+  }
+
+  100% {
+    background-color: grey;
+  }
+}

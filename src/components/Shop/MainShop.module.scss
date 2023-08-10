@@ -1,0 +1,25 @@
+@use "../../assets/sass/" as *;
+
+.main-shop {
+  background-color: $color-white;
+}
+
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 8rem 2rem;
+  max-width: 130rem;
+  margin: 0 auto;
+
+  @include respond($bp-large) {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  > * {
+    @include respond($bp-large) {
+      width: 100% !important;
+    }
+  }
+}

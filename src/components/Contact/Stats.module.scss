@@ -1,0 +1,36 @@
+@use "../../assets/sass/" as *;
+
+.section {
+  padding: 6rem 0;
+  padding-bottom: 18rem;
+}
+
+.container {
+  display: flex;
+  padding: 8rem;
+  justify-content: space-between;
+
+  @include respond($bp-middle) {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    gap: 1rem;
+
+    .number {
+      font-size: 2rem;
+      font-family: $font-family;
+    }
+
+    svg {
+      font-size: 4.5rem;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+  }
+}

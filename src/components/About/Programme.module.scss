@@ -1,0 +1,65 @@
+@use "../../assets/sass/" as *;
+
+.section {
+  padding: 10rem 0;
+  background-color: $color-white;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.imgcontainer {
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-black, 0.2),
+      rgba($color-black, 0.9)
+    ),
+    url(https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/04/join-programme.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  font-family: $font-family;
+
+  svg {
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.join {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  align-items: center;
+
+  @include respond($bp-middle) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .info {
+    width: 40%;
+    font-size: 1.6rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    line-height: 1.3;
+
+    @include respond($bp-middle) {
+      width: 100%;
+    }
+
+    h4 {
+      font-family: $font-family;
+    }
+  }
+}

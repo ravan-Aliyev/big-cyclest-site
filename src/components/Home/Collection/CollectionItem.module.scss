@@ -1,0 +1,21 @@
+@use "../../../assets/sass/" as *;
+
+.collection-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding-right: 50%;
+
+  @include respond($bp-large) {
+    padding: 0;
+  }
+
+  p {
+    font-size: 1.7rem;
+    font-family: $font-display;
+    line-height: 1.5;
+  }
+}

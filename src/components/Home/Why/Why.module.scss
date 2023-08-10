@@ -1,0 +1,25 @@
+@use "../../../assets/sass/" as *;
+
+.why {
+  font-family: $font-family;
+}
+
+.container {
+  padding: 12rem 2rem;
+  text-align: center;
+}
+
+.item-container {
+  display: flex;
+  gap: 2rem;
+  color: $color-white;
+  margin-bottom: 2rem;
+
+  @include respond($bp-middle) {
+    flex-wrap: wrap;
+  }
+
+  &:not(:last-child) {
+    margin-top: 7rem;
+  }
+}

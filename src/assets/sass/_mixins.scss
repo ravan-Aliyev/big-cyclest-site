@@ -1,0 +1,17 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerVertical {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin respond($bp) {
+  @media only screen and (max-width: $bp) {
+    @content;
+  }
+}
