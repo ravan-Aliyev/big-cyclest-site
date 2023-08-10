@@ -62,6 +62,10 @@
     border-color: transparent transparent transparent $color-black;
     margin-left: 10px;
   }
+
+  @include respond($bp-large) {
+    display: none;
+  }
 }
 
 .cart-icon {
@@ -75,6 +79,10 @@
   box-shadow: 0 2rem 6rem rgba($color-black, 0.8);
   @include center;
   cursor: pointer;
+
+  @include respond($bp-large) {
+    opacity: 1;
+  }
 
   &:hover {
     background-color: $color-white;
