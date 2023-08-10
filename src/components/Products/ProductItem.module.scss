@@ -80,16 +80,16 @@
   @include center;
   cursor: pointer;
 
-  @include respond($bp-large) {
-    opacity: 1;
-  }
-
   &:hover {
     background-color: $color-white;
     color: $color-black;
   }
 
   &:hover ~ .cart-tooltip {
+    opacity: 1;
+  }
+
+  @include respond($bp-large) {
     opacity: 1;
   }
 }
