@@ -10,7 +10,7 @@ export const postCartData = createAsyncThunk("postCart/fetch", async (item) => {
       },
       body: JSON.stringify({
         items: item.items,
-        totalValue: item.totalValue,
+        totalValue: item.totalValue || null,
       }),
     }
   );
@@ -89,8 +89,11 @@ const cartSlice = createSlice({
       })
       .addCase(getCartData.fulfilled, (state, action) => {
         state.loading = false;
-        state.items = action.payload.items;
-        state.totalValue = action.payload.totalValue;
+
+        if (action.payload) {
+          state.items = action.payload.items;
+          state.totalValue = action.payload.totalValue;
+        }
       })
       .addCase(getCartData.rejected, (state, action) => {
         state.loading = false;
