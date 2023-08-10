@@ -10,7 +10,7 @@ function CartButton(props) {
         2
       )}`}</p>
       <FaShoppingCart className={classes["cart-icon"]} />
-      <span>{selector.items?.length}</span>
+      <span>{selector.items?.length || 0}</span>
     </div>
   );
 }
