@@ -152,13 +152,14 @@ function ProductDetailPage() {
 
   const filteredProducts =
     data &&
-    data.filter(
-      (item) =>
+    data.filter((item) =>
+      params.proName.includes(
         item.modelName
           .replace("-", "")
           .replace("  ", " ")
           .replaceAll(" ", "-")
-          .toLowerCase() === params.proName
+          .toLowerCase()
+      )
     );
 
   return (

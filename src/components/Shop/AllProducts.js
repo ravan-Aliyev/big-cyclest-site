@@ -1,12 +1,11 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./AllProducts.module.scss";
 import ProductItem from "../Products/ProductItem";
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function AllProducts({ products, setSortHandler }) {
   const [page, setPage] = useState(1);
-  const location = useLocation();
   const catacory = useParams().catacory;
 
   const backwardPageHandler = () => {

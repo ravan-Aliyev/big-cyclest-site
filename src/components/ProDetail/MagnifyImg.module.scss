@@ -1,8 +1,16 @@
+@use "../../assets/sass/" as *;
+
 .figure {
   background-repeat: no-repeat;
 
   &:hover img {
     opacity: 0;
+  }
+
+  @include respond($bp-large) {
+    &:hover img {
+      opacity: 1;
+    }
   }
 
   img {
